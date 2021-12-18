@@ -15,10 +15,7 @@
 </head>
 
 <body>
-    <div data-cor="blue" data-width="1000" data-anima-scrool='left'>Uma div com data</div>
-    <div data-anima="left" data-tempo="1000">Div 1</div>
-    <div data-anima="right" data-tempo="2000">Div 1</div>
-    <nav class="menu js-menu">
+    <nav class="menu" data-menu="suave">
         <ul>
             <li><a href="#animais">Animais</a></li>
             <li><a href="#faq">Faq</a></li>
@@ -27,9 +24,9 @@
         </ul>
     </nav>
 
-    <section class="grid-section animais js-scroll" id="animais">
+    <section class="grid-section animais" data-anime="scroll" id="animais">
         <h1 class="titulo">Animais fantasticos</h1>
-        <ul class="animais-lista js-tabMenu">
+        <ul class="animais-lista" data-tab="menu">
             <li>
                 <img src="img/imagem1.jpg" alt="animal">
             </li>
@@ -49,8 +46,8 @@
                 <img src="img/imagem6.jpg" alt="animal">
             </li>
         </ul>
-        <div class="animais-descricao js-tabContent">
-            <section>
+        <div class="animais-descricao" data-tab="content">
+            <section data-anime="show-down" data-anime="show-right">
                 <h2>Raposa</h2>
                 <p>As raposas são animais mamiferos e onivoros pertecentes á familia Canide. São vulpideos de perto
                     médio, caracteristicas por um focinho comprido e uma cauda longa e peluda.</p>
@@ -61,7 +58,7 @@
                 <p>Tambem apresentam como particularidade suas pupilas ovais semelhantes ás pupilas verticais dos
                     felídeos</p>
             </section>
-            <section>
+            <section data-anime="show-right">
                 <h2>Esquilo</h2>
                 <p>As raposas são animais mamiferos e onivoros pertecentes á familia Canide. São vulpideos de perto
                     médio, caracteristicas por um focinho comprido e uma cauda longa e peluda.</p>
@@ -72,7 +69,7 @@
                 <p>Tambem apresentam como particularidade suas pupilas ovais semelhantes ás pupilas verticais dos
                     felídeos</p>
             </section>
-            <section>
+            <section data-anime="show-down">
                 <h2>Urso</h2>
                 <p>As raposas são animais mamiferos e onivoros pertecentes á familia Canide. São vulpideos de perto
                     médio, caracteristicas por um focinho comprido e uma cauda longa e peluda.</p>
@@ -83,7 +80,7 @@
                 <p>Tambem apresentam como particularidade suas pupilas ovais semelhantes ás pupilas verticais dos
                     felídeos</p>
             </section>
-            <section>
+            <section data-anime="show-right">
                 <h2>Lobo</h2>
                 <p>As raposas são animais mamiferos e onivoros pertecentes á familia Canide. São vulpideos de perto
                     médio, caracteristicas por um focinho comprido e uma cauda longa e peluda.</p>
@@ -94,7 +91,7 @@
                 <p>Tambem apresentam como particularidade suas pupilas ovais semelhantes ás pupilas verticais dos
                     felídeos</p>
             </section>
-            <section>
+            <section data-anime="show-down">
                 <h2>Macaco</h2>
                 <p>As raposas são animais mamiferos e onivoros pertecentes á familia Canide. São vulpideos de perto
                     médio, caracteristicas por um focinho comprido e uma cauda longa e peluda.</p>
@@ -105,7 +102,7 @@
                 <p>Tambem apresentam como particularidade suas pupilas ovais semelhantes ás pupilas verticais dos
                     felídeos</p>
             </section>
-            <section>
+            <section data-anime="show-right">
                 <h2>Leão</h2>
                 <p>As raposas são animais mamiferos e onivoros pertecentes á familia Canide. São vulpideos de perto
                     médio, caracteristicas por um focinho comprido e uma cauda longa e peluda.</p>
@@ -119,9 +116,9 @@
         </div>
     </section>
 
-    <section class="grid-section faq js-scroll" id="faq">
+    <section class="grid-section faq" data-anime="scroll" id="faq">
         <h1 class="titulo">Faq</h1>
-        <dl class="faq-lista js-accordion">
+        <dl class="faq-lista" data-anime="accordion">
             <dt>Qual a idade dos animais?</dt>
             <dd>As raposas são animais mamiferos e oniveros pertecentes á familia conidae. São vulpideos de porte medio,
                 caracteristicas por um focinho comprido e uma cauda longa e peluda.</dd>
@@ -137,7 +134,7 @@
         </dl>
     </section>
 
-    <section class="grid-section contato js-scroll" id="contato">
+    <section class="grid-section contato" data-anime="scroll" id="contato">
         <h1 class="titulo">Contato</h1>
         <div class="mapa">
             <img src="img/mapa.png" alt="mapa">
