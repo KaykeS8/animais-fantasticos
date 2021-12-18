@@ -318,3 +318,8 @@ body {
     transform: translate3d(0,0,0);
     transition: .4s;
 }
+
+[data-cor] {
+    background-color: blue;
+    color: white;
+}
