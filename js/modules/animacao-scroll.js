@@ -10,7 +10,7 @@ export default function initScrollWindow() {
                 const ativar = 'ativo'
                 if (isSectionVisible) {
                     section.classList.add(ativar)
-                } else {
+                } else if(section.classList.contains(ativar)) {
                     section.classList.remove(ativar)
                 }
             });
