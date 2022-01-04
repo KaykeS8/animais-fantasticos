@@ -341,3 +341,27 @@ body {
     transform: translate3d(0, 0, 0);
     transition: .4s;
 }
+
+
+
+li.aberto::after {
+    content: '';
+    display: inline-block;
+    background-color: #3f4;
+    width: 8px;
+    height: 8px;
+    margin-left: 5px;
+    border-radius: 50%;
+    border: 2px solid #000;
+}
+
+li.fechado::after {
+    content: '';
+    display: inline-block;
+    background-color: #e54;
+    width: 8px;
+    height: 8px;
+    margin-left: 5px;
+    border-radius: 50%;
+    border: 2px solid #000;
+}
