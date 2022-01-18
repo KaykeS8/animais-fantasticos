@@ -365,3 +365,10 @@ li.fechado::after {
     border-radius: 50%;
     border: 2px solid #000;
 }
+
+.btc-preco {
+    background-color: #3f4;
+    padding: .2rem .5rem;
+    font-weight: bold;
+    border-radius: 2px;
+}
