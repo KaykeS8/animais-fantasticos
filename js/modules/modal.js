@@ -1,28 +1,44 @@
-export default function initModal() {
-  const botaoAbrir = document.querySelector('[data-modal="abrir"]');
-  const botaoFechar = document.querySelector('[data-modal="fechar"]');
-  const containerModal = document.querySelector('[data-modal="container"]');
-  const cadastrouModal = document.querySelector('[data-modal="login"]');
+export default class Modal {
+  constructor(open, close, container) {
+    this.botaoAbrir = document.querySelector(open);
+    this.botaoFechar = document.querySelector(close);
+    this.containerModal = document.querySelector(container);
 
-  function abrirModal(e) {
-    e.preventDefault();
-    containerModal.classList.add('ativo');
+    // bind this ao calback para
+    // fazer referência ao objeto da classe
+    this.eventToggleModal = this.eventToggleModal.bind(this);
+    this.cliqueForaDoModal = this.cliqueForaDoModal.bind(this);
   }
 
-  function fecharModal(e) {
-    e.preventDefault();
-    containerModal.classList.remove('ativo');
+  // Abre ou fecha o modal
+  toggleModal() {
+    this.containerModal.classList.toggle('ativo');
   }
 
-  function cliqueForaDoModal(e) {
-    if (e.target === this) {
-      fecharModal(e);
+  // Adiciona o evento de toggle ao modal
+  eventToggleModal(event) {
+    event.preventDefault();
+    this.toggleModal();
+  }
+
+  // fecha o modal ao clicar do lado de fora
+  cliqueForaDoModal(event) {
+    if (event.target === this.containerModal) {
+      this.toggleModal();
     }
   }
 
-  if (botaoAbrir && botaoFechar && containerModal && cadastrouModal) {
-    botaoAbrir.addEventListener('click', abrirModal);
-    botaoFechar.addEventListener('click', fecharModal);
-    containerModal.addEventListener('click', cliqueForaDoModal);
+  // Adiciona os evento aos elementos do modal
+  addModalEvent() {
+    this.botaoAbrir.addEventListener('click', this.eventToggleModal);
+    this.botaoFechar.addEventListener('click', this.eventToggleModal);
+    this.containerModal.addEventListener('click', this.cliqueForaDoModal);
+  }
+
+  init() {
+    if (this.botaoAbrir && this.botaoFechar && this.containerModal) {
+      this.addModalEvent();
+    }
+    return this;
   }
 }
