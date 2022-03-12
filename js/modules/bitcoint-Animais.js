@@ -1,4 +1,5 @@
 export default function initFecthBitcoint() {
+  console.log("teste")
   async function puxarBitcoint(url) {
     try {
       const bitcointResponse = await fetch(url);
