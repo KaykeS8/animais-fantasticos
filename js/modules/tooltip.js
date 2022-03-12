@@ -1,4 +1,4 @@
-export default function initToltip() {
+export default function InitToltip() {
   const toltips = document.querySelectorAll('[data-tooltip]');
 
   const onMouseMove = {
