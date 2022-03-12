@@ -223,7 +223,7 @@ body {
 
 @media(max-width: 700px) {
     .grid-container {
-        grid-template-columns: 1;
+        grid-template-columns: 1fr;
     }
 
     .menu, .grid-section, .copy {
