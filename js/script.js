@@ -22,8 +22,6 @@ tabNav.init();
 const modal = new Modal('[data-modal="abrir"]', '[data-modal="fechar"]', '[data-modal="container"]');
 modal.init();
 
-// '[data-modal="abrir"]'
-
 initScrollWindow();
 initTooltip();
 initDropDownMenu();
