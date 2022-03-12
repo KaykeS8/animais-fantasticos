@@ -305,11 +305,15 @@ body {
 .js [data-anime="accordion"] dt::after {
     content: '▼';
     margin-left: 10px;
+    transform: rotate(90deg);
+    transition: transform .3s;
 }
 
 .js [data-anime="accordion"] dt.ativo::after {
     content: '▲ ';
     margin-left: 10px;
+    transform: rotate(90deg);
+    transition: transform .3s;
 }
 
 .js [data-anime="accordion"] dd.ativo {
