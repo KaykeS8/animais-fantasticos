@@ -1,14 +1,8 @@
-export default function initFecthBitcoint() {
-  console.log("teste")
-  async function puxarBitcoint(url) {
-    try {
-      const bitcointResponse = await fetch(url);
-      const bitcointJson = await bitcointResponse.json();
-      const preco = document.querySelector('.btc-preco');
-      preco.innerText = (1000 / bitcointJson.BRL.sell).toFixed(4);
-    } catch (erro) {
-      console.log(erro);
-    }
-  }
-  puxarBitcoint('https://blockchain.info/ticker');
+export default function initFecthBitcoint(url, target) {
+  fetch(url)
+    .then((response) => response.json())
+    .then((bitcoint) => {
+      const btcPreco = document.querySelector(target);
+      btcPreco.innerText = (1000 / bitcoint.BRL.sell).toFixed(4);
+    }).catch((erro) => console.log(Error(erro)));
 }
