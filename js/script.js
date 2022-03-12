@@ -25,9 +25,10 @@ modal.init();
 const menuMobile = new MenuMobile('[data-menu="button"]', '[data-menu="list"]');
 menuMobile.init();
 
+initFecthBitcoint('https://blockchain.info/ticker', '.btc-preco');
+
 initScrollWindow();
 initTooltip();
 initDropDownMenu();
 initFuncinamento();
 initFetchAnimal();
-initFecthBitcoint();
