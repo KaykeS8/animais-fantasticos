@@ -5,10 +5,10 @@ import initScrollWindow from './modules/animacao-scroll.js';
 import Modal from './modules/modal.js';
 import initTooltip from './modules/tooltip.js';
 import initDropDownMenu from './modules/dropdown-menu.js';
-import initMenuMobile from './modules/menu-mobile.js';
 import initFuncinamento from './modules/funcionamento.js';
 import initFetchAnimal from './modules/animais-fetch.js';
 import initFecthBitcoint from './modules/bitcoint-Animais.js';
+import MenuMobile from './modules/menu-mobile.js';
 
 const scrollSuave = new ScrollSuave('[data-menu="suave"] a[href^="#"]');
 scrollSuave.init();
@@ -22,10 +22,12 @@ tabNav.init();
 const modal = new Modal('[data-modal="abrir"]', '[data-modal="fechar"]', '[data-modal="container"]');
 modal.init();
 
+const menuMobile = new MenuMobile('[data-menu="button"]', '[data-menu="list"]');
+menuMobile.init();
+
 initScrollWindow();
 initTooltip();
 initDropDownMenu();
-initMenuMobile();
 initFuncinamento();
 initFetchAnimal();
 initFecthBitcoint();
