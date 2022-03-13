@@ -1,7 +1,7 @@
 import ScrollSuave from './modules/scroll-suave.js';
 import Accordion from './modules/accordion.js';
 import TabNav from './modules/tabNav.js';
-import initScrollWindow from './modules/animacao-scroll.js';
+import ScrollAnima from './modules/scroll-anima.js';
 import Modal from './modules/modal.js';
 import initTooltip from './modules/tooltip.js';
 import initDropDownMenu from './modules/dropdown-menu.js';
@@ -25,10 +25,12 @@ modal.init();
 const menuMobile = new MenuMobile('[data-menu="button"]', '[data-menu="list"]');
 menuMobile.init();
 
-initFecthBitcoint('https://blockchain.info/ticker', '.btc-preco');
+const scrollAnima = new ScrollAnima('[data-anime="scroll"');
+scrollAnima.init();
 
-initScrollWindow();
 initTooltip();
 initDropDownMenu();
 initFuncinamento();
 initFetchAnimal();
+
+initFecthBitcoint('https://blockchain.info/ticker', '.btc-preco');
