@@ -32,7 +32,6 @@ const dropdownMenu = new DropDownMenu('[data-dropdown]');
 dropdownMenu.init();
 
 const funcionamento = new Funcinamento('[data-semana]', 'aberto');
-console.log(funcionamento);
 funcionamento.init();
 
 initTooltip();
